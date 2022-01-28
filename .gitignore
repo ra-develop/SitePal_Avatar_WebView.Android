@@ -47,3 +47,9 @@ Thumbs.db
 *.flv
 *.mov
 *.wmv
+local.properties
+.gradle/7.2/dependencies-accessors/dependencies-accessors.lock
+.gradle/7.2/fileHashes/fileHashes.lock
+.gradle/buildOutputCleanup/buildOutputCleanup.lock
+.gradle/buildOutputCleanup/cache.properties
+.gradle/checksums/checksums.lock
