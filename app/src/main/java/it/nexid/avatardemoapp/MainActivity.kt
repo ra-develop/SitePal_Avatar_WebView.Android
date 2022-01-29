@@ -4,22 +4,35 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.webkit.WebView
 import android.webkit.WebViewClient
+import it.nexid.avatardemoapp.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
+
+    private lateinit var binding: ActivityMainBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
 
-        val myWebView: WebView = findViewById(R.id.webview)
-        myWebView.loadUrl("https://www.sitepal.com/api/examples/sayAudio.html")
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        val view = binding.root
+        setContentView(view)
+        
+        webViewSetup()
+    }
 
-        val webSettings = myWebView.settings
+    private fun webViewSetup(){
+
+        binding.myWebView.loadUrl("https://www.sitepal.com/api/examples/sayAudio.html")
+
+        val webSettings = binding.myWebView.settings
         webSettings.javaScriptEnabled = true
 
-        myWebView.webViewClient = WebViewClient()
+        binding.myWebView.webViewClient = WebViewClient()
 
-        myWebView.canGoBack()
-//        setContentView(myWebView)
+        binding.myWebView.canGoBack()
+    }
 
+    override fun onBackPressed() {
+        if (binding.myWebView.canGoBack()) binding.myWebView.goBack() else super.onBackPressed()
     }
 }
