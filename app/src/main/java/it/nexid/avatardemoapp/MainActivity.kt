@@ -16,13 +16,13 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
-        
+
         webViewSetup()
     }
 
     private fun webViewSetup(){
 
-        binding.myWebView.loadUrl("https://www.sitepal.com/api/examples/sayAudio.html")
+        binding.myWebView.loadUrl("file:///android_asset/page.html")
 
         val webSettings = binding.myWebView.settings
         webSettings.javaScriptEnabled = true
