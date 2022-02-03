@@ -1,9 +1,11 @@
 package it.nexid.avatardemoapp
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.webkit.WebView
 import android.webkit.WebViewClient
+import it.nexid.avatar_view_module.AvatarViewActivity
 import it.nexid.avatardemoapp.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -13,13 +15,20 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+/*
         binding = ActivityMainBinding.inflate(layoutInflater)
         val view = binding.root
-        setContentView(view)
+        setContentView(view)*/
 
-        webViewSetup()
+
+        val intent = Intent(this, AvatarViewActivity::class.java)
+
+        startActivity(intent)
+
+//        webViewSetup()
     }
 
+    /*
     private fun webViewSetup(){
 
         binding.myWebView.loadUrl("file:///android_asset/page.html")
@@ -35,4 +44,6 @@ class MainActivity : AppCompatActivity() {
     override fun onBackPressed() {
         if (binding.myWebView.canGoBack()) binding.myWebView.goBack() else super.onBackPressed()
     }
+*/
+
 }
