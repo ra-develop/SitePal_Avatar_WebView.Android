@@ -1,5 +1,5 @@
 plugins {
-    id 'com.android.application'
+    id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
 }
 
@@ -7,7 +7,7 @@ android {
     compileSdk 31
 
     defaultConfig {
-        applicationId "it.nexid.avatar_view_module"
+//        applicationId "it.nexid.avatar_view_module"
         minSdk 21
         targetSdk 31
         versionCode 1
