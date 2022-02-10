@@ -12,6 +12,6 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-rootProject.name = "Avatar demo App"
+rootProject.name = "SitePal Avatar Demo App"
 include ':app'
 include ':avatar_view_module'

@@ -7,7 +7,6 @@ android {
     compileSdk 31
 
     defaultConfig {
-//        applicationId "it.nexid.avatar_view_module"
         minSdk 21
         targetSdk 31
         versionCode 1
